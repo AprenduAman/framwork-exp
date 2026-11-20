@@ -1,0 +1,15 @@
+{
+  "name": "aurick-automation-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test":           "playwright test",
+    "test:ci":        "playwright test --reporter=line,json,junit",
+    "test:headed":    "AURICK_HEADLESS=false playwright test",
+    "test:debug":     "PWDEBUG=1 playwright test",
+    "install:browsers": "playwright install --with-deps chromium"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}
